@@ -1,0 +1,15 @@
+<h3 style="color: red;" data-sly-test="${wcmmode.edit}">${component.title}</h3>
+<sly data-sly-use.layout="ph.com.globe.oc3.core.models.LayoutModel">
+<sly data-sly-use.checkList="ph.com.globe.oc3.core.models.CheckListModel">
+<div class="benefit-block ${layout.style}" >
+  <h2 class="benefit__title">${properties.title}</h2>
+  <ul class="benefit__list">
+  	<sly data-sly-list.itemList="${checkList.checkListInformation}">
+	    <li class="benefit__item"><img class="benefit__thumb" src=${itemList.icon} alt="benefit comp"/>
+	      <div class="benefit__text">
+	        <p>${itemList.description}</p>
+	      </div>
+	    </li>
+    </sly>
+  </ul>
+</div>
